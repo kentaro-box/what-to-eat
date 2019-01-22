@@ -66,9 +66,6 @@ const question1 = '{ "problem" : [' +
 
 //パースしてる
 const obj = JSON.parse(question1);
-// console.log(JSON.stringify(obj));
-//
-// console.log(obj.problem[5].yes);
 
 let question = document.getElementById('question');
 let yes_number = document.getElementById('yes_number');
@@ -80,24 +77,14 @@ no_number.innerHTML = obj.problem[0].no;
 
 
 const yes = document.getElementById('yes').onclick = function () {
-    // yes_number = document.getElementById('yes_number').innerHTML ;
-    // let no_number = document.getElementById('no_number').innerHTML ;
     yes_number = document.getElementById('yes_number').innerHTML;
     
     question.innerHTML = obj.problem[yes_number].quest;
     let yes_number2 =  obj.problem[yes_number].yes;
-    yes_number.innerHTML = yes_number2;
+    document.getElementById('yes_number').innerHTML = yes_number2;
     console.log(yes_number2);
-    no_number.innerHTML = no_number;
    
     
-    // let no_number = document.getElementById('no_number');
-    // no_number.innerHTML = no_number;
-    
-    // yes = obj.problem[this].yes;
-    // no = obj.problem[this].no;
-    // number = obj.problem[this].quest;
-    // question.innerHTML = obj.problem[number].quest;
 };
 
 const no = document.getElementById('no').onclick = function () {
