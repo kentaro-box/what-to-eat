@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>question__What shall I eat</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <div id='container'>
+        <div class="question-title" id="position">
+
+            <!-- {{--条件分岐で質問だす--}} -->
+            <!-- {{--例えば、question id3から飛んで来たらid6の質問だす！とか--}} -->
+                <h2 id="position">質問内容</h2> 
+                <p id="question"></p>
+            </div>
+            <div class="answer" id="back-image">
+            <!-- var_dump(question_distribute); -->
+            <!-- {{--条件分岐で問題に対しての進む道が変わる--}} -->
+            <!-- {{--DBにhrefのURL仕込んどく？？--}} -->
+                <p id="yes" href="">あるかなぁ〜</p>
+                <p id="no" href="">ないかなぁ〜</p>
+                    <div id="none">
+                        <p id="yes_number"></p>
+                        <p id="no_number"></p>
+                    </div>
+            </div>
+    </div>
+    <!-- <footer>
+        免責：健康被害が出ても一切の責任は持ちませんよ〜
+    </footer> -->
+    <script src="script.js"></script> 
+    
+</body>
+</html>
