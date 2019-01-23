@@ -30,6 +30,13 @@ display: block;
 body {
 line-height: 1;
 }
+.body {
+    animation: anime1 3s ease ;
+}
+@keyframes anime1 {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    }
 ol, ul {
 list-style: none;
 }
@@ -129,6 +136,13 @@ header {
     background-color: #ff5500;
     color: white;
     border: 1px solid #ff5500;
+}
+/*result*/
+.links-result {
+    display: flex;
+}
+#cooking ,#eating-out{
+    width:300px;
 }
 footer {
     height: 32px;
