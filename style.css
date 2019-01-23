@@ -75,6 +75,10 @@ a {
     border: 1px solid gray;
     cursor: pointer;
     display: inline-block;
+    width: 180px;
+    margin: 0 auto;
+    transition: 0.7s;
+    border-radius: 10px;
 }
 html, body {
     background-color: #fff;
@@ -125,24 +129,92 @@ header {
     margin: 80px auto 0 auto;
     line-height: 40px;
     text-align: center;
+    
 }
 .answer a {
     padding: 16px 24px;
     border-radius: 10px;
     margin: 0 24px;
     transition: 0.5s;
+    width: 160px;
+    transition: 0.7s;
 }
 .answer p:hover {
-    background-color: #ff5500;
+    background-color: #dc8d88;
     color: white;
-    border: 1px solid #ff5500;
+    border: 1px solid #dc8d88;
+    transition: 0.7s;
+}
+#none {
+    display: none;
 }
 /*result*/
 .links-result {
     display: flex;
+    margin-top: 24px;
+    width: 500px;
+    margin: 16px auto 0 auto;
 }
 #cooking ,#eating-out{
-    width:300px;
+    width:234px;
+    margin: 0 auto;
+    /* border-top: 1px solid #dc8d88;
+    border-left: 1px solid #dc8d88;
+    border-right: 1px solid #dc8d88; */
+    margin: 8px 16px;
+}
+.links-result h3 {
+    padding-bottom: 16px;
+    font-size: 1.3rem;
+    /* border-bottom: 1px solid #dc8d88; */
+    padding: 16px 24px;
+}
+.arrow{
+    position: relative;
+    background: #dc8d88;
+    padding: 2em;
+    margin-bottom: 20px;
+    color: white;
+  }
+.arrow:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    margin: auto;
+    border-style: solid;
+    border-color: #dc8d88 transparent transparent transparent;
+    border-width: 20px 20px 0 20px;
+}
+.links-result a {
+    border: none;
+    display: block;
+    padding: 16px;
+    border-bottom: 1px solid #dc8d88;
+}
+
+#problem {
+    text-align: center;
+    background-color: #dc8d88;
+    padding: 16px;
+    color: white;
+    width: 438px;
+    margin: 0 auto;
+}
+#choice {
+    margin: 48px auto 0 auto;
+    text-align: center;
+}
+a {
+    transition: 0.7s;
+}
+a:hover{
+    background-color:#dc8d88;
+    transition: 0.7s;
+    color:white;
 }
 footer {
     height: 32px;

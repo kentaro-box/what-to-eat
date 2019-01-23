@@ -11,7 +11,7 @@ window.onload  =  function() {
 
     // backChange関数を作り、中に各要素の変更したい様に記述 
     function backChange() {
-        document.body.style.backgroundColor = "green" ;
+        document.body.style.backgroundColor = "#3fb170" ;
         document.body.style.color = "white" ;
         document.body.style.transition = "2s";
         // document.position.style.color = "white" ;

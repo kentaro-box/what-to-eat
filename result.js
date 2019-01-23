@@ -1,8 +1,23 @@
 window.onload = function(){
 
-    //JSONーーーーーーーーーーーーーーーーーーーーーーー
+    //表示ポジション調整ーーーーーーーーーーーーーーー
+
+    // const position = document.getElementById("position");
+    const container = document.getElementById("container");
+    //画面のサイズを取得
+    let screen_height = window.innerHeight;
+    
+    //メニューの高さを計算
+    menu_height = Math.floor(screen_height/6,0);
+  
+    //各メニューにサイズを割当る
+    position.style.marginTop = menu_height + "px";
+
+//表示ポジション調整終了ーーーーーーーーーーーーーー
+
+//JSONーーーーーーーーーーーーーーーーーーーーーーー
 const answer = '{ "solution" : [' +
-'{ "id": "1","solve": "ヴァイタミンAガ、フソクカシテイルカモシレナイデスネ。","cook":["鳥肝","牛肝","ホウレン草"],"eatout":["焼き鳥","焼肉","ファミレス"]  },' +
+'{ "id": "1","solve": "ヴァイタミンAガ、フソクシテイルカモシレナイデスネ。","cook":["鳥肝","牛肝","ホウレン草"],"eatout":["焼き鳥","焼肉","ファミレス"]  },' +
 '{ "id": "2","solve": "偏食しがち","cook":["a鳥肝","a牛肝","aホウレン草"],"eatout":["a焼き鳥","a焼肉","aファミレス"] },' +
 '{ "id": "3","solve": "よく目が充血する","yes": "4","no": "3" },' +
 '{ "id": "4","solve": "余り日光にあたらない","yes": "6","no": "5" },' +
