@@ -28,7 +28,7 @@ const question1 = '{ "problem" : [' +
 '{ "id": "3","quest": "よく目が充血する","yes": "4","no": "3" },' +
 '{ "id": "4","quest": "余り日光にあたらない","yes": "6","no": "5" },' +
 '{ "id": "5","quest": "暗いところでは、よく見えない","yes": "100","no": "6" },' +
-'{ "id": "6","quest": "寝つきが悪い。または、なんども目が覚める。","yes": "11","no": "7" },' +
+'{ "id": "6","quest": "寝つきが悪い。または、なんども目が覚める。","yes": "10","no": "7" },' +
 '{ "id": "7","quest": "余り魚を食べない","yes": "200","no": "9" },' +
 '{ "id": "8","quest": "肌荒れが気になる","yes": "400","no": "8" },' +
 '{ "id": "9","quest": "怠い。疲れやすい。","yes": "10","no": "1000" },' +
@@ -52,7 +52,7 @@ const yes = document.getElementById('yes').onclick = function () {
     yes_number = document.getElementById('yes_number').innerHTML;
     if (yes_number === "100" || yes_number === "200" || yes_number === "300" || yes_number === "400" || yes_number === "500" || yes_number === "600" || yes_number === "700") {
         var url = document.URL;
-                location.href ="http://localhost/what-to-eat/result.html" + "?=" + yes_number;
+        location.href ="http://localhost/what-to-eat/result.html" + "?=" + yes_number;
     } else {
         question.innerHTML = obj.problem[yes_number].quest;
         let yes_number2 =  obj.problem[yes_number].yes;
@@ -67,7 +67,8 @@ const yes = document.getElementById('yes').onclick = function () {
 const no = document.getElementById('no').onclick = function () {
     no_number = document.getElementById('no_number').innerHTML;
     if(no_number === "1000" || no_number === "900" ) {
-        location.href="result.html";
+        var url = document.URL;
+        location.href ="http://localhost/what-to-eat/result.html" + "?=" + no_number;
     } else {
         question.innerHTML = obj.problem[no_number].quest;
         let yes_number2 =  obj.problem[no_number].yes;
