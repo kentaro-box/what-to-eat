@@ -17,17 +17,15 @@ window.onload = function(){
 
 //JSONーーーーーーーーーーーーーーーーーーーーーーー
 const answer = '{ "solution" : [' +
-'{ "id": "1","solve": "ヴァイタミンAガ、フソクシテイルカモシレナイデスネ。","cook":["鳥肝","牛肝","ホウレン草"],"eatout":["焼き鳥","焼肉","ファミレス"]  },' +
-'{ "id": "2","solve": "偏食しがち","cook":["a鳥肝","a牛肝","aホウレン草"],"eatout":["a焼き鳥","a焼肉","aファミレス"] },' +
-'{ "id": "3","solve": "よく目が充血する","yes": "4","no": "3" },' +
-'{ "id": "4","solve": "余り日光にあたらない","yes": "6","no": "5" },' +
-'{ "id": "5","solve": "暗いところでは、よく見えない","yes": "100","no": "6" },' +
-'{ "id": "6","solve": "寝つきが悪い。または、なんども目が覚める。","yes": "11","no": "7" },' +
-'{ "id": "7","solve": "余り魚を食べない","yes": "200","no": "9" },' +
-'{ "id": "8","solve": "肌荒れが気になる","yes": "400","no": "8" },' +
-'{ "id": "9","solve": "怠い。疲れやすい。","yes": "10","no": "1000" },' +
-'{ "id": "11","solve": "貧血気味である","yes": "600","no": "900" },' +
-'{ "id": "12","solve": "集中力、思考力が低下していると感じる。","yes": "300","no": "9" } ]}';
+'{ "id": "1","solve": "ヴァイタミンAガ、フソクシテイルカモシレナイデスネ。","cook":["鶏レバー","うなぎ肝","牛レバー"],"eatout":["焼き鳥","うなぎ屋","焼肉"]  },' +
+'{ "id": "2","solve": "ビタミンDが不足しているかも！？"                 ,"cook":["いくら","紅鮭","うなぎの蒲焼"],"eatout":["寿司","紅鮭","鰻屋"] },' +
+'{ "id": "3","solve": "タンパク質が不足しているかもしれないです。"        ,"cook":["ささみ、ムネ肉、カモ","生ハム","牛ヒレ、肩ロース、牛モモ"],"eatout":["焼き鳥","イタリアン","焼肉"] },' +
+'{ "id": "4","solve": "ビタミンB２が不足しているかも！？"               ,"cook":["うなぎ","牛乳","牛レバー"],"eatout":["鰻屋","銭湯","焼肉"] },' +
+'{ "id": "5","solve": "ビタミンB群が足りない？？"                      ,"cook":["豚ヒレ(B1,B2)","マグロ(B6,ナイアシン)","牛レバー(B12)"],"eatout":["豚肉","寿司","焼肉"] },' +
+'{ "id": "7","solve": "鉄分足りないかも？？",                         "cook":["鶏レバー","貝類","玉子"],"eatout":["焼き鳥","寿司","おでん"] },' +
+'{ "id": "8","solve": "休養が必要かもよー！！"                        ,"cook":["美味しいもの","美味しいもの","美味しいもの"],"eatout":["美味しいもの","美味しいもの","美味しいもの"] },' +
+'{ "id": "9","solve": "たぶん健康と思う。"                           ,"cook":["好きなもの作ってー","ー","ー"],"eatout":["好きなもの食べてー","ー","ー"] }' +
+']}';
 
 //パースしてる
 const objct = JSON.parse(answer);
@@ -39,21 +37,43 @@ let url = document.URL;
 const base_url = "http://localhost/what-to-eat/result.html";
 
 //パラメータに対して呼び出す配列を関数化
-function display_content () {
-    const id1= document.getElementById('1').innerHTML = objct.solution[0].cook[0];
-    const id2= document.getElementById('2').innerHTML = objct.solution[0].cook[1];
-    const id3= document.getElementById('3').innerHTML = objct.solution[0].cook[2];
-    const id11= document.getElementById('11').innerHTML = objct.solution[0].eatout[0];
-    const id12= document.getElementById('12').innerHTML = objct.solution[0].eatout[1];
-    const id13= document.getElementById('13').innerHTML = objct.solution[0].eatout[2];
+function display_content (x) {
+    slice_url = url.slice( -3 );
+    console.log(slice_url);
+    
+    const id1= document.getElementById('1').innerHTML = objct.solution[x].cook[0];
+    const id2= document.getElementById('2').innerHTML = objct.solution[x].cook[1];
+    const id3= document.getElementById('3').innerHTML = objct.solution[x].cook[2];
+    const id11= document.getElementById('11').innerHTML = objct.solution[x].eatout[0];
+    const id12= document.getElementById('12').innerHTML = objct.solution[x].eatout[1];
+    const id13= document.getElementById('13').innerHTML = objct.solution[x].eatout[2];
+    return x;
 }
 //パラメーターごとにobj(jsonファイル)の「solve」の指定
 if (url === (base_url + "?=100")) {
     const problem = document.getElementById('problem').innerHTML = objct.solution[0].solve;
-    display_content();
+    display_content(0);
 } else if (url === (base_url + "?=200")) {
     const problem = document.getElementById('problem').innerHTML = objct.solution[1].solve;
-    display_content();
+    display_content(1);
+} else if (url === (base_url + "?=300")) {
+    const problem = document.getElementById('problem').innerHTML = objct.solution[2].solve;
+    display_content(2);
+} else if (url === (base_url + "?=400")) {
+    const problem = document.getElementById('problem').innerHTML = objct.solution[3].solve;
+    display_content(3);
+} else if (url === (base_url + "?=500")) {
+    const problem = document.getElementById('problem').innerHTML = objct.solution[4].solve;
+    display_content(4);
+} else if (url === (base_url + "?=600")) {
+    const problem = document.getElementById('problem').innerHTML = objct.solution[5].solve;
+    display_content(5);
+} else if (url === (base_url + "?=900")) {
+    const problem = document.getElementById('problem').innerHTML = objct.solution[6].solve;
+    display_content(6);
+} else if (url === (base_url + "?=1000")) {
+    const problem = document.getElementById('problem').innerHTML = objct.solution[7].solve;
+    display_content(7);
 } else {
     const problem = document.getElementById('problem').innerHTML = "概ね健康そうだね〜。<br>好きなものたべなー";
 }
