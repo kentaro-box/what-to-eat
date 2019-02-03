@@ -52,7 +52,7 @@ const yes = document.getElementById('yes').onclick = function () {
     yes_number = document.getElementById('yes_number').innerHTML;
     if (yes_number === "100" || yes_number === "200" || yes_number === "300" || yes_number === "400" || yes_number === "500" || yes_number === "600" || yes_number === "700") {
         var url = document.URL;
-        location.href ="http://localhost/what-to-eat/result.html" + "?=" + yes_number;
+        location.href ="http://localhost/what-to-eat/result.php" + "?=" + yes_number;
     } else {
         question.innerHTML = obj.problem[yes_number].quest;
         let yes_number2 =  obj.problem[yes_number].yes;
@@ -68,7 +68,7 @@ const no = document.getElementById('no').onclick = function () {
     no_number = document.getElementById('no_number').innerHTML;
     if(no_number === "1000" || no_number === "900" ) {
         var url = document.URL;
-        location.href ="http://localhost/what-to-eat/result.html" + "?=" + no_number;
+        location.href ="http://localhost/what-to-eat/result.php" + "?=" + no_number;
     } else {
         question.innerHTML = obj.problem[no_number].quest;
         let yes_number2 =  obj.problem[no_number].yes;

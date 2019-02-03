@@ -18,7 +18,7 @@ window.onload = function(){
 //JSONーーーーーーーーーーーーーーーーーーーーーーー
 const answer = '{ "solution" : [' +
 '{ "id": "1","solve": "ヴァイタミンAガ、フソクシテイルカモシレナイデスネ。","cook":["鶏レバー","うなぎ肝","牛レバー"],"eatout":["焼き鳥","うなぎ屋","焼肉"]  },' +
-'{ "id": "2","solve": "ビタミンDが不足しているかも！？"                 ,"cook":["いくら","紅鮭","うなぎの蒲焼"],"eatout":["寿司","紅鮭","鰻屋"] },' +
+'{ "id": "2","solve": "ビタミンDが不足しているかも！？"                 ,"cook":["いくら","鮭","うなぎ"],"eatout":["寿司","紅鮭","鰻屋"] },' +
 '{ "id": "3","solve": "タンパク質が不足しているかもしれないです。"        ,"cook":["ささみ、ムネ肉、カモ","生ハム","牛ヒレ、肩ロース、牛モモ"],"eatout":["焼き鳥","イタリアン","焼肉"] },' +
 '{ "id": "4","solve": "ビタミンB２が不足しているかも！？"               ,"cook":["うなぎ","牛乳","牛レバー"],"eatout":["鰻屋","銭湯","焼肉"] },' +
 '{ "id": "5","solve": "ビタミンB群が足りない？？"                      ,"cook":["豚ヒレ(B1,B2)","マグロ(B6,ナイアシン)","牛レバー(B12)"],"eatout":["豚肉","寿司","焼肉"] },' +
@@ -34,21 +34,22 @@ const objct = JSON.parse(answer);
 let url = document.URL;
 
 //パラメーターを向いた部分を変数に格納
-const base_url = "http://localhost/what-to-eat/result.html";
+const base_url = "http://localhost/what-to-eat/result.php";
 
 //パラメータに対して呼び出す配列を関数化
 function display_content (x) {
     slice_url = url.slice( -3 );
-    console.log(slice_url);
     
-    const id1= document.getElementById('1').innerHTML = objct.solution[x].cook[0];
-    const id2= document.getElementById('2').innerHTML = objct.solution[x].cook[1];
-    const id3= document.getElementById('3').innerHTML = objct.solution[x].cook[2];
+    id1= document.getElementById('1').innerHTML = objct.solution[x].cook[0];
+    id2= document.getElementById('2').innerHTML = objct.solution[x].cook[1];
+    id3= document.getElementById('3').innerHTML = objct.solution[x].cook[2];
     const id11= document.getElementById('11').innerHTML = objct.solution[x].eatout[0];
     const id12= document.getElementById('12').innerHTML = objct.solution[x].eatout[1];
     const id13= document.getElementById('13').innerHTML = objct.solution[x].eatout[2];
     return x;
 }
+
+
 //パラメーターごとにobj(jsonファイル)の「solve」の指定
 if (url === (base_url + "?=100")) {
     const problem = document.getElementById('problem').innerHTML = objct.solution[0].solve;
@@ -79,3 +80,4 @@ if (url === (base_url + "?=100")) {
 }
 
 }
+

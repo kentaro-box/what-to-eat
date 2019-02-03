@@ -1,0 +1,102 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+color: #151515;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+.body {
+    animation: anime1 3s ease ;
+}
+@keyframes anime1 {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    }
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+a {
+    text-decoration: none;
+   color: #151515;
+}
+.shop {
+    width: 100%;
+}
+.shop h2 {
+    font-size: 2em;
+}
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+.container h1 {
+    font-size: 2.1em;
+    text-align: center;
+    margin: 32px auto 0 auto;
+    border: 1px solid #dc8d88;
+    padding: 16px;
+    background-color: #dc8d88;
+    border-radius: 10px;
+    color: white;
+
+}
+.hotpepper {
+    text-align: right;
+    margin-top: 8px;
+}
+.loop {
+    padding: 32px;
+    border-bottom: 1px dotted gray;
+}
+.loop h2 {
+    margin: 8px 0;
+}
+
+.loop p {
+    margin: 8px 0;
+}
+.loop a {
+    font-weight: bold;
+    color: #dc8d88;
+}
+.loop p:last-child{
+margin-top:16px;
+}
