@@ -2,7 +2,7 @@
 $latitude = $_POST['a'];
 $longitude = $_POST['b'];
 $key_word = $_POST['food'];
-$api = "d01f59366e3bd62b";
+$api = "";
 
 $hotpepper = "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=${api}&lat=${latitude}&lng=${longitude}&range=5&keyword=${key_word}";// &keyword=${key_word}   &format=json　　&forma=callback=show　　&forma=callback=jsonData
 
